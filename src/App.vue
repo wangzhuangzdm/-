@@ -1,32 +1,24 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+   <tab-bar></tab-bar>
+   <left-aside></left-aside>
+   <router-view></router-view>
+   <play-music></play-music>
   </div>
 </template>
-
+<script>
+import TabBar from 'components/content/tabbar/TabBar';
+import LeftAside from 'components/content/leftaside/LeftAside';
+import PlayMusic from 'components/content/playmusic/PlayMusic'
+export default {
+  name:'App',
+  components:{
+    TabBar,
+    LeftAside,
+    PlayMusic
+  }
+}
+</script>
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+@import "assets/css/base.css";
 </style>
