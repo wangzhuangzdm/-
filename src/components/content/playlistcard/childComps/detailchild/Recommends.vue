@@ -81,6 +81,7 @@ export default {
 }
 .top {
   padding: 2px 0 5px 0;
+  line-height: 20px;
 }
 .top span {
   color: rgb(33, 89, 209);
